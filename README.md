@@ -64,7 +64,7 @@ root
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/mvc-nodejs-project.git
+git clone https://github.com/alialghanay/mvc-nodejs-project.git
 cd mvc-nodejs-project
 ```
 ### Install the dependencies:
