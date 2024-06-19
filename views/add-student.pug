@@ -1,0 +1,22 @@
+extends layout.pug
+block content
+  .container
+    .row.justify-content-center
+      .col-md-8
+        if error
+          .alert.alert-warning= error
+        .card
+          .card-header Add Student To DataBase
+          .card-body
+            form.form-horizontal(method='post' action='/add-student')
+              .mb-3
+                label.form-label.control-label(for='name') Name
+                input#name.form-control(type='text' name='name')
+              .mb-3
+                label.form-label.control-label(for='address') Address
+                input#address.form-control(type='text' name='address')
+              .mb-3
+                label.form-label.control-label(for='age') Age
+                input#age.form-control(type='number' name='age')
+              .mb-3.py-3
+                button.btn.btn-primary.login-button(type='submit') Save Student

@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+  .container
+    h4 Dashboard
+    .mb-3
+      a.btn.btn-primary(href='/add-student') Add New Student
+      button.btn.btn-danger.ml-3(onclick='deleteAllStudents()') Delete All Students
+
+    if students.length > 0
+      each student in students
+        .card.mb-3
+          .card-body
+            h5.card-title= student.name
+            p.card-text
+              | Age: #{student.age}
+            p.card-text
+              | Address: #{student.address}
+    else
+      p No students found.
+
+  script(src='/js/dashboard.js')
